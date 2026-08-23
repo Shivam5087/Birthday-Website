@@ -1,0 +1,918 @@
+/* ===============================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #29232b;
+    background: #fff8fb;
+    overflow-x: hidden;
+}
+
+
+/* ===============================
+   LOADER
+================================ */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #fff8fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+.loader-heart {
+    font-size: 70px;
+    animation: heartbeat 1s infinite;
+}
+
+#loader h2 {
+    font-family: "Playfair Display", serif;
+    margin-top: 20px;
+}
+
+#loader p {
+    color: #777;
+    margin-top: 8px;
+}
+
+@keyframes heartbeat {
+
+    50% {
+        transform: scale(1.25);
+    }
+
+}
+
+
+/* ===============================
+   NAVBAR
+================================ */
+
+nav {
+    height: 80px;
+    padding: 0 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(15px);
+
+    z-index: 100;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #e75480;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e75480;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 10%;
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #ffe0ea,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #e7dcff,
+            transparent 30%
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow,
+.section-label {
+    color: #dc4e7a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.95;
+}
+
+.hero h1 span {
+    display: block;
+    color: #dc4e7a;
+}
+
+.hero-description {
+    color: #6e6870;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.main-btn,
+.game-btn,
+.surprise-btn {
+    display: inline-block;
+
+    border: none;
+    border-radius: 50px;
+
+    padding: 15px 28px;
+
+    background: #282329;
+    color: white;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    margin-top: 25px;
+
+    transition: 0.3s;
+}
+
+.main-btn:hover,
+.game-btn:hover,
+.surprise-btn:hover {
+    background: #dc4e7a;
+    transform: translateY(-4px);
+}
+
+
+/* ===============================
+   BIRTHDAY ORB
+================================ */
+
+.birthday-orb {
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e3,
+            #e4d7ff
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: floating 4s ease-in-out infinite;
+
+    box-shadow:
+        0 30px 80px rgba(80,50,80,0.15);
+}
+
+.orb-inner {
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.75);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.cake {
+    font-size: 90px;
+}
+
+.orb-text {
+    font-family: "Playfair Display", serif;
+}
+
+.orb-text strong {
+    display: block;
+    font-size: 15px;
+}
+
+.orb-text span {
+    font-size: 50px;
+    color: #dc4e7a;
+}
+
+@keyframes floating {
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* ===============================
+   COUNTDOWN
+================================ */
+
+.countdown-section {
+    padding: 100px 8%;
+    text-align: center;
+    background: white;
+}
+
+.countdown-section h2,
+.games-section h2,
+.message-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px,5vw,60px);
+    margin-bottom: 45px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-box {
+
+    width: 130px;
+
+    padding: 25px 10px;
+
+    border-radius: 20px;
+
+    background: #fff5f8;
+}
+
+.time-box span {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    font-weight: 700;
+}
+
+.time-box small {
+    color: #777;
+}
+
+
+/* ===============================
+   GAMES
+================================ */
+
+.games-section {
+
+    padding: 120px 7%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fb,
+            #f8f3ff
+        );
+}
+
+.games-intro {
+    color: #777;
+    margin-top: -25px;
+    margin-bottom: 60px;
+}
+
+.game-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.game-card {
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 35px 25px;
+
+    box-shadow:
+        0 20px 60px rgba(60,40,70,0.08);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+}
+
+.game-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.game-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.game-card > p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.game-stats {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+.game-stats strong {
+    color: #dc4e7a;
+}
+
+
+/* ===============================
+   GAME AREA
+================================ */
+
+.game-area {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 300px;
+
+    margin-top: 20px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: none;
+}
+
+
+/* ===============================
+   BALLOON GAME
+================================ */
+
+.balloon-area {
+
+    background:
+        linear-gradient(
+            180deg,
+            #dceeff,
+            #f7e9ff
+        );
+}
+
+.balloon {
+
+    position: absolute;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    animation:
+        balloonFloat 2s ease-in-out infinite;
+}
+
+@keyframes balloonFloat {
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* ===============================
+   HEART GAME
+================================ */
+
+.heart-area {
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffe9f0,
+            #fff4f7
+        );
+
+    display: none;
+}
+
+.falling-heart {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    top: -40px;
+}
+
+.basket {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 45px;
+
+    user-select: none;
+}
+
+
+/* ===============================
+   QUIZ
+================================ */
+
+.quiz-area {
+
+    margin-top: 25px;
+
+    min-height: 230px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.quiz-question {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+.quiz-option {
+
+    border: 1px solid #eee;
+
+    background: #fff8fb;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.quiz-option:hover {
+    background: #ffe3ec;
+}
+
+
+/* ===============================
+   PROGRESS
+================================ */
+
+.progress-container {
+
+    max-width: 600px;
+
+    margin: 70px auto 0;
+
+}
+
+.progress-container p {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+
+    height: 12px;
+
+    background: #eee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #dc4e7a,
+            #a66cff
+        );
+
+    transition: width 0.5s;
+}
+
+#progressText {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ===============================
+   MESSAGE
+================================ */
+
+.message-section {
+
+    padding: 130px 8%;
+
+    display: flex;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffe4ed,
+            #fff8fb
+        );
+}
+
+.message-card {
+
+    max-width: 800px;
+
+    padding: 70px 50px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 30px 80px rgba(70,40,70,0.12);
+}
+
+.message-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.message {
+
+    color: #69636a;
+
+    line-height: 2;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ===============================
+   SURPRISE
+================================ */
+
+.surprise-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(30,20,30,0.75);
+
+    backdrop-filter: blur(10px);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 999;
+
+    padding: 20px;
+}
+
+.surprise-overlay.active {
+    display: flex;
+}
+
+.surprise-box {
+
+    position: relative;
+
+    max-width: 550px;
+
+    width: 100%;
+
+    padding: 60px 40px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    animation: popup 0.5s ease;
+}
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+.close-btn {
+
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+
+.fireworks {
+    font-size: 60px;
+}
+
+.big-heart {
+
+    font-size: 80px;
+
+    animation:
+        heartbeat 1s infinite;
+}
+
+.surprise-box h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 45px;
+
+    margin: 15px 0;
+}
+
+.surprise-box p {
+
+    color: #666;
+
+    line-height: 1.8;
+}
+
+.final-line {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 20px;
+
+    margin-top: 20px;
+}
+
+.celebration {
+
+    margin-top: 25px;
+
+    font-size: 28px;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #282329;
+
+    color: white;
+}
+
+footer h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+}
+
+footer p {
+
+    color: #bbb;
+
+    margin-top: 10px;
+}
+
+.footer-heart {
+
+    color: #ff6b91;
+
+    font-size: 30px;
+
+    margin-top: 15px;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 70px 6%;
+    }
+
+    .birthday-orb {
+
+        width: 300px;
+        height: 300px;
+    }
+
+    .orb-inner {
+
+        width: 225px;
+        height: 225px;
+    }
+
+    .game-cards {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        width: 100px;
+    }
+
+    .message-card {
+        padding: 45px 25px;
+    }
+
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+
+}

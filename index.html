@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= LOADER ================= -->
+
+    <div id="loader">
+        <div class="loader-heart">❤️</div>
+        <h2>Preparing Your Birthday Surprise...</h2>
+        <p>Get ready to play 🎮</p>
+    </div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            For You <span>♥</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#message">Message</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                🎉 TODAY IS YOUR SPECIAL DAY 🎉
+            </p>
+
+            <h1>
+                Happy Birthday
+                <span>VBHV ❤️</span>
+            </h1>
+
+            <p class="hero-description">
+                Today isn't just about cake and presents.
+                It's about celebrating YOU!
+            </p>
+
+            <p class="hero-description">
+                So I've prepared something a little different...
+            </p>
+
+            <a href="#games" class="main-btn">
+                🎮 Start Playing
+            </a>
+
+        </div>
+
+
+        <div class="birthday-orb">
+
+            <div class="orb-inner">
+
+                <div class="cake">
+                    🎂
+                </div>
+
+                <div class="orb-text">
+                    <strong>YOUR</strong>
+                    <span>DAY</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COUNTDOWN ================= -->
+
+    <section class="countdown-section">
+
+        <p class="section-label">
+            THE COUNTDOWN
+        </p>
+
+        <h2>
+            Until Your Birthday 🎂
+        </h2>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GAMES ================= -->
+
+    <section id="games" class="games-section">
+
+        <p class="section-label">
+            🎮 BIRTHDAY ARCADE
+        </p>
+
+        <h2>
+            Three Games. One Birthday. ❤️
+        </h2>
+
+        <p class="games-intro">
+            Complete all three challenges and unlock your final birthday surprise!
+        </p>
+
+
+        <!-- GAME CARDS -->
+
+        <div class="game-cards">
+
+
+            <!-- GAME 1 -->
+
+            <div class="game-card">
+
+                <div class="game-icon">
+                    🎈
+                </div>
+
+                <h3>
+                    Pop The Balloons
+                </h3>
+
+                <p>
+                    Pop as many balloons as you can before time runs out!
+                </p>
+
+                <div class="game-stats">
+                    <span>
+                        Score:
+                        <strong id="balloonScore">0</strong>
+                    </span>
+
+                    <span>
+                        Time:
+                        <strong id="balloonTime">30</strong>
+                    </span>
+                </div>
+
+                <button
+                    class="game-btn"
+                    onclick="startBalloonGame()">
+                    Start Game
+                </button>
+
+                <div
+                    id="balloonGame"
+                    class="game-area balloon-area">
+                </div>
+
+            </div>
+
+
+            <!-- GAME 2 -->
+
+            <div class="game-card">
+
+                <div class="game-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Catch The Hearts
+                </h3>
+
+                <p>
+                    Move the basket and catch the falling hearts!
+                </p>
+
+                <div class="game-stats">
+
+                    <span>
+                        Score:
+                        <strong id="heartScore">0</strong>
+                    </span>
+
+                    <span>
+                        Lives:
+                        <strong id="heartLives">3</strong>
+                    </span>
+
+                </div>
+
+                <button
+                    class="game-btn"
+                    onclick="startHeartGame()">
+                    Start Game
+                </button>
+
+                <div
+                    id="heartGame"
+                    class="game-area heart-area">
+
+                    <div
+                        id="basket"
+                        class="basket">
+                        🧺
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GAME 3 -->
+
+            <div class="game-card">
+
+                <div class="game-icon">
+                    🎁
+                </div>
+
+                <h3>
+                    Birthday Quiz
+                </h3>
+
+                <p>
+                    Answer the questions and prove how well you know your birthday!
+                </p>
+
+                <div
+                    id="quizArea"
+                    class="quiz-area">
+
+                    <button
+                        class="game-btn"
+                        onclick="startQuiz()">
+                        Start Quiz
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-container">
+
+            <p>
+                Birthday Challenge Progress
+            </p>
+
+            <div class="progress-bar">
+
+                <div
+                    id="progress"
+                    class="progress">
+                </div>
+
+            </div>
+
+            <span id="progressText">
+                0 / 3 Games Completed
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= BIRTHDAY MEMORIES ================= -->
+
+<section class="memories-section">
+
+    <p class="section-label">SPECIAL MEMORIES</p>
+
+    <h2>Four Little Memories ❤️</h2>
+
+    <p class="memories-intro">
+        A few pictures to make this birthday page even more special.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card">
+            <img src="./1.jpeg">
+            <span>Memory 01 ❤️</span>
+        </div>
+
+        <div class="memory-card">
+            <img src="./2.jpeg">
+            <span>Memory 02 ✨</span>
+        </div>
+
+        <div class="memory-card">
+            <img src="./3.jpeg">
+            <span>Memory 03 🎂</span>
+        </div>
+
+        <div class="memory-card">
+            <img src="./4.jpeg">
+            <span>Memory 04 💕</span>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ================= FINAL MESSAGE ================= -->
+
+    <section
+        id="message"
+        class="message-section">
+
+        <div class="message-card">
+
+            <div class="message-icon">
+                💌
+            </div>
+
+            <p class="section-label">
+                A MESSAGE FOR YOU
+            </p>
+
+            <h2>
+                Happy Birthday! ❤️
+            </h2>
+
+            <p class="message">
+
+                Today is your day, so I hope you take a moment
+                to celebrate yourself and everything you've achieved.
+
+                <br><br>
+
+                May this new year of your life bring you
+                exciting adventures, amazing opportunities,
+                lots of laughter and countless reasons to smile.
+
+                <br><br>
+
+                Keep chasing your dreams.
+                Keep being yourself.
+                And never forget how amazing you are.
+
+                <br><br>
+
+                <strong>
+                    Here's to another incredible year! 🎂✨
+                </strong>
+
+            </p>
+
+            <button
+                class="surprise-btn"
+                onclick="showFinalSurprise()">
+
+                🎁 Unlock Final Surprise
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FINAL SURPRISE ================= -->
+
+    <div
+        id="finalSurprise"
+        class="surprise-overlay">
+
+        <div class="surprise-box">
+
+            <button
+                class="close-btn"
+                onclick="closeFinalSurprise()">
+                ×
+            </button>
+
+            <div class="fireworks">
+                🎉
+            </div>
+
+            <h2>
+                YOU DID IT! 🏆
+            </h2>
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+            <p>
+                Happy Birthday to one of the most amazing
+                people ever!
+            </p>
+
+            <p class="final-line">
+                May your year be as awesome as you are. ✨
+            </p>
+
+            <div class="celebration">
+                🎂 🎈 🎁 🎉 🥳 ✨ ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            Made With ❤️ For Your Birthday
+        </h3>
+
+        <p>
+            Have an amazing day! 🎂
+        </p>
+
+        <div class="footer-heart">
+            ♥
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
